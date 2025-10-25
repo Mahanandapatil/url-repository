@@ -22,7 +22,7 @@ func HandleShortenURL(w http.ResponseWriter, r *http.Request) {
 	shortCode := services.ShortenURL(requestData.LongURL)
 
 	response := map[string]string{
-		"short_url": fmt.Sprintf("sho.rt/%s", shortCode),
+		"short_url": fmt.Sprintf("/%s", shortCode),
 	}
 
 	w.Header().Set("Content-Type", "application/json")
